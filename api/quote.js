@@ -34,4 +34,5 @@ function getQuote() {
       html: template(quote),
     })
     .then(console.log, console.error);
+  return quote;
 }
