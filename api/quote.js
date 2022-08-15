@@ -4,7 +4,13 @@ const { MailtrapClient } = require("mailtrap");
 
 require("dotenv").config();
 
-export default function quote(request, response) {
+export default async function quote(request, response) {
+  const quotation = await getQuote();
+
+  return response.status(200).send(quotation);
+}
+
+function getQuote() {
   const client = new MailtrapClient({
     endpoint: process.env.MAILTRAP_API_ENDPOINT,
     token: process.env.MAILTRAP_API_TOKEN,
@@ -28,5 +34,4 @@ export default function quote(request, response) {
       html: template(quote),
     })
     .then(console.log, console.error);
-  response.status(200).send("Success");
 }
