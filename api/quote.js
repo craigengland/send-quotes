@@ -6,11 +6,17 @@ require("dotenv").config();
 
 export default async function quote(request, response) {
   const quotation = await getQuote();
-
+  await sendEmail(quotation);
   return response.status(200).send(quotation);
 }
 
-function getQuote() {
+async function getQuote() {
+  const quote = quotes[Math.floor(Math.random() * quotes.length)];
+
+  return quote;
+}
+
+async function sendEmail(quote) {
   const client = new MailtrapClient({
     endpoint: process.env.MAILTRAP_API_ENDPOINT,
     token: process.env.MAILTRAP_API_TOKEN,
@@ -24,9 +30,7 @@ function getQuote() {
       email: process.env.RECIPIENT_EMAIL,
     },
   ];
-  const quote = quotes[Math.floor(Math.random() * quotes.length)];
-
-  client
+  return client
     .send({
       from: sender,
       to: recipients,
@@ -34,5 +38,4 @@ function getQuote() {
       html: template(quote),
     })
     .then(console.log, console.error);
-  return quote;
 }
