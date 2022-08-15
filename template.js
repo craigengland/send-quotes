@@ -1,4 +1,4 @@
-module.exports = function ({ text, character, path }) {
+module.exports = function ({ text, character }) {
   return `
 <!doctype html>
 <html>
@@ -307,7 +307,6 @@ module.exports = function ({ text, character, path }) {
                       <td>
                         <p>${text}</p>
                         <p>By ${character}</p>
-                        <img src="${path}.svg" alt=${path}/>
                       </td>
                     </tr>
                   </table>
