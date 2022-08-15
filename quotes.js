@@ -1,6 +1,6 @@
 module.exports = [
   {
-    character: "Winnie the Pooh",
+    character: "Winnie the Pooh and Piglet",
     text: "How do you spell 'love'? - Piglet. You don't spell it...you feel it. - Pooh",
     path: "winnie",
   },
@@ -25,17 +25,17 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Winnie the Pooh and Piglet",
     text: "If you live to be a hundred, I want to live to be a hundred minus one day so I never have to live without you.",
     path: "winnie",
   },
   {
     character: "Winnie the Pooh",
-    text: "And really, it wasn't much good having anything exciting like floods, if you couldn't share them with somebody.",
+    text: "It would have been jolly to talk like this, and really, it wasn't much good having anything exciting like floods, if you couldn't share them with somebody.",
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Christopher Robin",
     text: "You're braver than you believe, stronger than you seem and smarter than you think.",
     path: "winnie",
   },
@@ -45,13 +45,18 @@ module.exports = [
     path: "winnie",
   },
   {
+    character: "Tigger",
+    text: "The most wonderful thing about Tiggers is, I’m the only one.",
+    path: "tigger",
+  },
+  {
     character: "Winnie the Pooh",
     text: "There must be somebody there, because somebody must have said Nobody.",
     path: "winnie",
   },
   {
     character: "Winnie the Pooh",
-    text: "Piglet was so excited at the idea of being Useful that he forgot to be frightened any more",
+    text: "Piglet was so excited at the idea of being useful that he forgot to be frightened any more, and when Rabbit went on to say that Kangas were only Fierce during the winter months, being at other times of an Affectionate Disposition, he could hardly sit still, he was so eager to begin being useful at once.",
     path: "winnie",
   },
   {
@@ -86,13 +91,8 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Winnie the Pooh and Christopher Robin",
     text: "'I have been Foolish and Deluded,' said he, 'And I am a Bear of No Brain at All.' 'You're the Best Bear in All the World,' said Christopher Robin soothingly. 'Am I?' said Pooh hopefully.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
-    text: "The most wonderful thing about Tiggers is, I'm the only one.",
     path: "winnie",
   },
   {
@@ -126,7 +126,7 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Winnie the Pooh and Christopher Robin",
     text: "What should happen if you forget about me? asked Pooh. Silly old bear, I won't ever forget about you, said Christopher Robin.",
     path: "winnie",
   },
@@ -217,16 +217,11 @@ module.exports = [
   },
   {
     character: "Winnie the Pooh",
-    text: "Those who are clever, who have a Brain, never understand anything.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
     text: "When life throws you a rainy day, play in the puddles.",
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Winnie the Pooh and Piglet",
     text: "'When you wake up in the morning, Pooh,' said Piglet at last, 'What's the first thing you say to yourself?', 'What's for breakfast?' said Pooh. 'What do you say, Piglet?', 'I say, I wonder what's going to happen exciting today?' said Piglet., Pooh nodded thoughtfully. 'It's the same thing,' he said.",
     path: "winnie",
   },
@@ -248,11 +243,6 @@ module.exports = [
   {
     character: "Winnie the Pooh",
     text: "Spelling isn't everything. There are days when spelling Tuesday simply doesn't count.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
-    text: "To the uneducated, an A is just three sticks.",
     path: "winnie",
   },
   {
@@ -311,7 +301,7 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Tigger",
     text: "I've found somebody just like me. I thought I was the only one of them.",
     path: "winnie",
   },
@@ -336,11 +326,6 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
-    text: "A day without a friend is like a pot without a single drop of honey left inside.",
-    path: "winnie",
-  },
-  {
     character: "Winnie the Pooh and Piglet",
     text: "Pooh! he whispered., Yes, Piglet?, Nothing, said Piglet, taking Pooh's paw. I just wanted to be sure of you.",
     path: "winnie",
@@ -361,18 +346,13 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Eeyore",
     text: "Could be worse. Not sure how, but it could be.",
     path: "winnie",
   },
   {
     character: "Winnie the Pooh",
     text: "Nobody can be uncheered with a balloon.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
-    text: "Used to believe in forever ... but forever was too good to be true.",
     path: "winnie",
   },
   {
@@ -407,11 +387,6 @@ module.exports = [
   },
   {
     character: "Winnie the Pooh",
-    text: "Then Piglet saw what a Foolish Piglet he had been, and he was so ashamed of himself that he ran straight off home and went to bed with a headache.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
     text: "How lucky I am to have something that makes saying goodbye so hard.",
     path: "winnie",
   },
@@ -423,11 +398,6 @@ module.exports = [
   {
     character: "Winnie the Pooh",
     text: "But, of course, it isn't really Good-bye, because the Forest will always be there…and anybody who is Friendly with Bears can find it.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
-    text: "Think, think, think.",
     path: "winnie",
   },
   {
@@ -563,32 +533,12 @@ module.exports = [
   },
   {
     character: "Winnie the Pooh",
-    text: "So he decided to do something helpful instead.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
     text: "Pooh hasn't much Brain, but he never comes to any harm. He does silly things and they turn out right.",
     path: "winnie",
   },
   {
     character: "Winnie the Pooh",
-    text: "Owl hasn't exactly got Brain, but he Knows Things. He would know the Right Thing to Do when Surrounded by Water.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
-    text: "There's Rabbit. He hasn't Learnt in Books, but he can always Think of a Clever Plan.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
-    text: "She isn't Clever, Kanga isn't, but she would be so anxious about Roo that she would do a Good Thing to Do without thinking about it.",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
-    text: "And then there's Eeyore. And Eeyore is so miserable anyhow that he wouldn't mind about this.",
+    text: "Owl hasn't exactly got Brain, but he Knows Things. He would know the Right Thing to Do when Surrounded by Water. There's Rabbit. He hasn't Learnt in Books, but he can always Think of a Clever Plan. She isn't Clever, Kanga isn't, but she would be so anxious about Roo that she would do a Good Thing to Do without thinking about it. And then there's Eeyore. And Eeyore is so miserable anyhow that he wouldn't mind about this.",
     path: "winnie",
   },
   {
@@ -623,11 +573,6 @@ module.exports = [
   },
   {
     character: "Winnie the Pooh",
-    text: "I wonder what's going to happen exciting today?",
-    path: "winnie",
-  },
-  {
-    character: "Winnie the Pooh",
     text: "On Monday, when the sun is hot I wonder to myself a lot: Now is it true, or is it not, That what is which and which is what? On Tuesday, when it hails and snows, The feeling on me grows and grows That hardly anybody knows If those are these or these are those. On Wednesday, when the sky is blue, And I have nothing else to do, I sometimes wonder if it's true That who is what and what is who. On Thursday, when it starts to freeze And hoar-frost twinkles on the trees, How very readily one sees That these are whose—but whose are these?",
     path: "winnie",
   },
@@ -637,7 +582,7 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Winnie the Pooh and Piglet",
     text: "'I don't feel very much like Pooh today,' said Pooh. 'There, there,' said Piglet. 'I'll bring you tea and honey until you do.'",
     path: "winnie",
   },
@@ -657,12 +602,12 @@ module.exports = [
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Eeyore",
     text: "It's not much of a tail, but I'm sort of attached to it.",
     path: "winnie",
   },
   {
-    character: "Winnie the Pooh",
+    character: "Winnie the Pooh and Eeyore",
     text: "Oh! Well, Many happy returns of the day, Eeyore. And many happy returns to you, Pooh Bear. But it isn't my birthday. No, it's mine. But you said 'Many happy returns'- Well, why not? You don't always want to be miserable on my birthday, do you?",
     path: "winnie",
   },
