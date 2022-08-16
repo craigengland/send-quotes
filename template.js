@@ -49,6 +49,8 @@ module.exports = function ({ text, character }) {
       .body {
         background-color: #f6f6f6;
         width: 100%;
+        box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.23) 0px 1px 2px 0px;
+        border-radius: 10px;
       }
 
       /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
@@ -307,6 +309,7 @@ module.exports = function ({ text, character }) {
                       <td>
                         <p>${text}</p>
                         <p>By ${character}</p>
+                        <img src="cid:pooh" alt="Winnie the Pooh" />
                       </td>
                     </tr>
                   </table>
