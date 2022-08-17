@@ -2,15 +2,19 @@ const quotes = require("../quotes");
 const template = require("../template");
 const { MailtrapClient } = require("mailtrap");
 const fs = require("fs");
+const path = require("path");
 require("dotenv").config();
 
 export default async function quote(request, response) {
   const quotation = await getQuote();
-  const imageString = await getBase64(
-    `https://send-quotes.vercel.app/assets/${quotation.path}.png`
-  );
+  const file = await getFilePath(quotation.path);
+  const imageString = await getBase64(file);
   await sendEmail(quotation, imageString);
   return response.status(200).send(quotation);
+}
+
+async function getFilePath(filePath) {
+  return path.join(process.cwd(), "assets", `${filePath}.png`);
 }
 
 async function getBase64(file) {
