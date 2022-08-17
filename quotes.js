@@ -47,7 +47,7 @@ module.exports = [
   {
     character: "Tigger",
     text: "The most wonderful thing about Tiggers is, I’m the only one.",
-    path: "tigger",
+    path: "winnie",
   },
   {
     character: "Winnie the Pooh",

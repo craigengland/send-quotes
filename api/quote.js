@@ -6,17 +6,14 @@ require("dotenv").config();
 
 export default async function quote(request, response) {
   const quotation = await getQuote();
-  await sendEmail(quotation);
+  const imageString = await getBase64(`assets/${quotation.path}.png`);
+  await sendEmail(quotation, imageString);
   return response.status(200).send(quotation);
 }
 
 async function getBase64(file) {
-  try {
-    const base64String = fs.readFileSync(file, { encoding: "base64" });
-    return base64String;
-  } catch (e) {
-    throw new Error("The path provided doesn't exist");
-  }
+  const base64String = fs.readFileSync(file, { encoding: "base64" });
+  return base64String;
 }
 
 async function getQuote() {
@@ -25,7 +22,7 @@ async function getQuote() {
   return quote;
 }
 
-async function sendEmail(quote) {
+async function sendEmail(quote, base) {
   // Create and connect to mailtrap client
   const client = new MailtrapClient({
     endpoint: process.env.MAILTRAP_API_ENDPOINT,
@@ -46,7 +43,7 @@ async function sendEmail(quote) {
   ];
 
   // Get base64 from relevant image
-  const imageString = await getBase64(`assets/${quote.path}.png`);
+
   return client
     .send({
       from: sender,
@@ -55,7 +52,7 @@ async function sendEmail(quote) {
       html: template(quote),
       attachments: [
         {
-          content: imageString,
+          content: base,
           type: "text/plain",
           filename: `assets/${quote.path}.png`,
           disposition: "inline",
