@@ -12,8 +12,12 @@ export default async function quote(request, response) {
 }
 
 async function getBase64(file) {
-  const base64String = fs.readFileSync(file, { encoding: "base64" });
-  return base64String;
+  try {
+    const base64String = fs.readFileSync(file, { encoding: "base64" });
+    return base64String;
+  } catch (e) {
+    throw new Error("The path provided doesn't exist");
+  }
 }
 
 async function getQuote() {
@@ -43,7 +47,7 @@ async function sendEmail(quote) {
   ];
 
   // Get base64 from relevant image
-  const imageString = await getBase64(`./assets/${quote.path}.png`);
+  const imageString = await getBase64(`../assets/${quote.path}.png`);
   return client
     .send({
       from: sender,
