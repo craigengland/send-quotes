@@ -2,7 +2,6 @@ const quotes = require("../quotes");
 const template = require("../template");
 const { MailtrapClient } = require("mailtrap");
 const fs = require("fs");
-
 require("dotenv").config();
 
 export default async function quote(request, response) {
@@ -46,8 +45,13 @@ async function sendEmail(quote) {
     },
   ];
 
+  // Get root path
+  const rootPath = () => {
+    return process.cwd();
+  };
+
   // Get base64 from relevant image
-  const imageString = await getBase64(`../assets/${quote.path}.png`);
+  const imageString = await getBase64(`${rootPath}/assets/${quote.path}.png`);
   return client
     .send({
       from: sender,
