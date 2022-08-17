@@ -7,8 +7,8 @@ require("dotenv").config();
 
 export default async function quote(request, response) {
   const quotation = await getQuote();
-  const file = await getFilePath(quotation.path);
-  const imageString = await getBase64(file);
+  const image = await getFilePath(quotation.path);
+  const imageString = await getBase64(image);
   await sendEmail(quotation, imageString);
   return response.status(200).send(quotation);
 }
@@ -17,8 +17,8 @@ async function getFilePath(filePath) {
   return path.join(process.cwd(), "assets", `${filePath}.png`);
 }
 
-async function getBase64(file) {
-  const base64String = fs.readFileSync(file, { encoding: "base64" });
+async function getBase64(image) {
+  const base64String = fs.readFileSync(image, { encoding: "base64" });
   return base64String;
 }
 
