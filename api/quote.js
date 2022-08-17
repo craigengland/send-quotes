@@ -50,8 +50,11 @@ async function sendEmail(quote) {
     return process.cwd();
   };
 
+  const buildPath = `${rootPath}/assets/${quote.path}.png`;
+  console.log(buildPath);
+
   // Get base64 from relevant image
-  const imageString = await getBase64(`${rootPath}/assets/${quote.path}.png`);
+  const imageString = await getBase64(buildPath);
   return client
     .send({
       from: sender,
