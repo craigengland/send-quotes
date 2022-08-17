@@ -45,16 +45,8 @@ async function sendEmail(quote) {
     },
   ];
 
-  // Get root path
-  const rootPath = () => {
-    return process.cwd();
-  };
-
-  const buildPath = `${rootPath}/assets/${quote.path}.png`;
-  console.log(buildPath);
-
   // Get base64 from relevant image
-  const imageString = await getBase64(buildPath);
+  const imageString = await getBase64(`assets/${quote.path}.png`);
   return client
     .send({
       from: sender,
@@ -65,7 +57,7 @@ async function sendEmail(quote) {
         {
           content: imageString,
           type: "text/plain",
-          filename: "assets/winnie.png",
+          filename: `assets/${quote.path}.png`,
           disposition: "inline",
           content_id: quote.path,
         },
