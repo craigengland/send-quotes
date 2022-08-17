@@ -6,7 +6,7 @@ require("dotenv").config();
 
 export default async function quote(request, response) {
   const quotation = await getQuote();
-  const imageString = await getBase64(`assets/${quotation.path}.png`);
+  const imageString = await getBase64(`../assets/${quotation.path}.png`);
   await sendEmail(quotation, imageString);
   return response.status(200).send(quotation);
 }
