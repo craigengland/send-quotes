@@ -42,8 +42,6 @@ async function sendEmail(quote, base) {
     },
   ];
 
-  // Get base64 from relevant image
-
   return client
     .send({
       from: sender,

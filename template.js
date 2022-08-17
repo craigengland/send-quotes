@@ -1,4 +1,4 @@
-module.exports = function ({ text, character }) {
+module.exports = function ({ text, character, path }) {
   return `
 <!doctype html>
 <html>
