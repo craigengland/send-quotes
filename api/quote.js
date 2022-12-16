@@ -80,8 +80,8 @@ async function getQuote() {
 export default async function handler(request, response) {
   const quote = await getQuote();
   const msg = {
-    to: "crgnglnd@gmail.com",
-    from: "craig@craigengland.co.uk",
+    to: process.env.RECIPIENT_EMAIL,
+    from: process.env.FROM_EMAIL,
     subject: `Your quote from Winnie the Pooh and friends!`,
     text: quotes[Math.floor(Math.random() * quotes.length)].text,
     html: `
@@ -371,7 +371,7 @@ export default async function handler(request, response) {
         </style>
       </head>
       <body>
-        <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+        <span class="preheader">Your uplifting quotation.</span>
         <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
           <tr>
             <td>&nbsp;</td>
