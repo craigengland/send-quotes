@@ -74,8 +74,11 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 export default function handler(request, response) {
   const msg = {
     to: "crgnglnd@gmail.com",
-    from: "craig@craigengland.co.uk",
-    subject: `Cheers to a new day!`,
+    from: {
+      email: "craig@craigengland.co.uk",
+      name: "Winnie the Pooh and friends",
+    },
+    subject: `Your quote from Winnie the Pooh and friends!`,
     text: quotes[Math.floor(Math.random() * quotes.length)].text,
   };
   sgMail.send(msg);
