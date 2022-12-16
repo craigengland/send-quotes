@@ -73,7 +73,7 @@ const sgMail = require("@sendgrid/mail");
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 export default function handler(request, response) {
-  const job = schedule.scheduleJob("30 * * * *", function () {
+  const job = schedule.scheduleJob("40 * * * *", function () {
     const msg = {
       to: "crgnglnd@gmail.com", // Change to your recipient
       from: "craig@craigengland.co.uk", // Change to your verified sender
