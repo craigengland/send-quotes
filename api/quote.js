@@ -385,6 +385,7 @@ export default async function handler(request, response) {
                           <td>
                             <p>${quote.text}</p>
                             <p>By ${quote.character}</p>
+                            <img src="https://send-quotes.vercel.app/assets/${quote.path}.png" alt="${quote.path}" />
                           </td>
                         </tr>
                       </table>
