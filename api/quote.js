@@ -71,17 +71,17 @@
 require("dotenv").config();
 const schedule = require("node-schedule");
 const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default function handler(request, response) {
-  const job = schedule.scheduleJob("30 * * * *", function () {
-    const msg = {
-      to: "crgnglnd@gmail.com", // Change to your recipient
-      from: "craig@craigengland.co.uk", // Change to your verified sender
-      subject: `Cheers to a new day!`,
-      text: "Hope your day has been well!",
-    };
-    sgMail.send(msg);
-  });
-  return response.status(200);
+  // sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+  // const job = schedule.scheduleJob("30 * * * *", function () {
+  //   const msg = {
+  //     to: "crgnglnd@gmail.com", // Change to your recipient
+  //     from: "craig@craigengland.co.uk", // Change to your verified sender
+  //     subject: `Cheers to a new day!`,
+  //     text: "Hope your day has been well!",
+  //   };
+  //   sgMail.send(msg);
+  // });
+  return response.status(200).json({ name: "Craig" });
 }
