@@ -67,7 +67,7 @@
 //     .then(console.log, console.error);
 // }
 
-const quotes = require("./quotes");
+const quotes = require("../quotes");
 const sgMail = require("@sendgrid/mail");
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
