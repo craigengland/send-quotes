@@ -83,5 +83,5 @@ export default function handler(request, response) {
     };
     sgMail.send(msg);
   });
-  response.status(200);
+  return response.status(200);
 }
