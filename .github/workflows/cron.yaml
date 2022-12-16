@@ -1,7 +1,7 @@
 name: bi-weekly-cron
 on:
   schedule:
-    - cron: "00 8 * * 1,4,7"
+    - cron: "00 8 * * 1,4,6"
 jobs:
   cron:
     runs-on: ubuntu-latest
