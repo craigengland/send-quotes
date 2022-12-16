@@ -1,0 +1,12 @@
+name: bi-weekly-cron
+on:
+  schedule:
+    - cron: "55 * * * *"
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the function
+        run: |
+          curl --request GET \
+          --url 'https://send-quotes.vercel.app//api/quote' \
